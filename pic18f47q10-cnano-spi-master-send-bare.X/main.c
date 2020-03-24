@@ -72,8 +72,9 @@ static void PORT_init(void)
     TRISC &= ~_TRISC_TRISC6_MASK;       /* SS1 channel as output */
     TRISC &= ~_TRISC_TRISC7_MASK;       /* SS2 channel as output */
     
-    ANSELC = ~_ANSELC_ANSELC6_MASK 
-           & ~_ANSELC_ANSELC7_MASK;     /* Set RC6 and RC7 pins as digital */
+    ANSELC = ~_ANSELC_ANSELC4_MASK
+           & ~_ANSELC_ANSELC6_MASK 
+           & ~_ANSELC_ANSELC7_MASK;     /* Set RC4, RC6 and RC7 pins as digital */
 }
 
 static void SPI1_init(void)
