@@ -29,6 +29,7 @@
 
 #include <xc.h>
 #include <stdint.h>
+#include <pic18f47q10.h>
 
 static void CLK_Initialize(void);
 static void PPS_Initialize(void);
@@ -45,9 +46,9 @@ uint8_t receiveData;            /* Data that will be received */
 
 static void CLK_Initialize(void)
 {
-    OSCCON1 = 0x60;        /* HFINTOSC Oscillator */
+    OSCCON1bits.NOSC = 6;        /* HFINTOSC Oscillator */
     
-    OSCFRQ = 0x02;         /* HFFRQ 4 MHz */
+    OSCFRQbits.HFFRQ = 2;        /* HFFRQ 4 MHz */
 }
 
 static void PPS_Initialize(void)
