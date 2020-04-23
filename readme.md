@@ -30,6 +30,6 @@ The following configurations must be made for this project:
 |RC7 (SS2)     | Digital Output     |
 
 ## Operation
-Run the code, connect an oscilloscope or logic analyzer to the pins and see the results. The device will transmit `writeData` continuously through its SDO channel and will select the two slave devices one at a time.
+Run the code, connect an oscilloscope or logic analyzer to the pins and see the results. The device will transmit `writeData` continuously through its SDO channel and will select the two slave devices, one at a time.
 
 <img src="Images/PIC18F47Q10-Curiosity-Nano.png" alt="Hardware Setup"/>

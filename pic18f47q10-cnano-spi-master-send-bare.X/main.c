@@ -95,14 +95,14 @@ static void SPI1_slave2Select(void)
 
 static void SPI1_slave2Deselect(void)
 {
-    LATCbits.LATC7 = 1;           /* Set SS2 pin value to HIGH */    
+    LATCbits.LATC7 = 1;          /* Set SS2 pin value to HIGH */    
 }
 
 static uint8_t SPI1_exchangeByte(uint8_t data)
 {
     SSP1BUF = data;
     
-    while(!PIR3bits.SSP1IF) /* Wait until data is exchanged */
+    while(!PIR3bits.SSP1IF) 	/* Wait until data is exchanged */
     {
         ;
     }   
